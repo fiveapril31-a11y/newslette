@@ -1,0 +1,49 @@
+{
+  "entities": {
+    "ChatMessage": {
+      "title": "ChatMessage",
+      "description": "Real-time chat messages exchanged across different devices and team members.",
+      "type": "object",
+      "properties": {
+        "senderName": { "type": "string" },
+        "senderEmail": { "type": "string" },
+        "senderAvatar": { "type": "string" },
+        "text": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "device": { "type": "string" },
+        "hasBill": { "type": "boolean" },
+        "billData": { "type": "string" }
+      },
+      "required": ["senderName", "text", "createdAt"]
+    },
+    "ClientBill": {
+      "title": "ClientBill",
+      "description": "Client bills, invoices, receipts, and associated commercial contract data.",
+      "type": "object",
+      "properties": {
+        "clientName": { "type": "string" },
+        "clientEmail": { "type": "string" },
+        "service": { "type": "string" },
+        "billAmount": { "type": "number" },
+        "currency": { "type": "string" },
+        "invoiceNumber": { "type": "string" },
+        "notes": { "type": "string" },
+        "fileName": { "type": "string" },
+        "fileData": { "type": "string" },
+        "uploadedBy": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["clientName", "billAmount", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/chat_messages/{messageId}": {
+      "schema": "ChatMessage",
+      "description": "Real-time communication messages synced across connected devices."
+    },
+    "/client_bills/{billId}": {
+      "schema": "ClientBill",
+      "description": "Uploaded client bills, commercial data, and invoices."
+    }
+  }
+}

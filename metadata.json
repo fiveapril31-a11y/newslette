@@ -1,0 +1,7 @@
+{
+  "name": "Akaar Entertainment CRM | Inbound Pipeline & Finance Command Center",
+  "description": "Executive entertainment CRM featuring real-time inbound mail gateway for service@akaarentertainment.com, commercial rate & quote builder, deal pipeline tracker, client billing vault, and automated financial intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
